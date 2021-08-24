@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body { 
+background: #232323; 
+margin-left: 20px;
+}
+.accordion {
+background: #666;
+color: white;
+cursor: pointer;
+padding: 20px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    color: rgb(253, 194, 2);
+    background-color:rgb(83, 83, 83);
+}
+.active, .accordion:visited {
+    background: #666;
+    color: rgb(253, 194, 2);
+    
+}
+
+.accordion:after {
+content: '\002B';
+color: rgb(252, 252, 252);
+float: right;
+margin-left: 5px;
+margin-top: 5px;
+}
+
+.active:after {
+content: "\2212";
+}
+
+.panel {
+font-size: larger;
+padding: 0 10px;
+background: rgb(0, 0, 0);
+color: rgb(247, 210, 0);
+border: 8px solid;
+border-color: rgb(209, 33, 33);
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+font-weight: bolder;
+}
+</style>
+</head>
+<body>
+<h1 style="color:#fd0037;"><center>FREQUENTLY ASKED QUESTIONS(FAQS):</center></h1>
+<button class="accordion"><b>Q.What is the primary goal of the website JustBuyIt.com?</b></button>
+<div class="panel">
+<p><b>Ans:</b> The only primary goal of JustBuyIt.com is to save the valuable time of the customer and help him/her select and buy the right laptop with the desired specs without unwanted hassles. </p>
+</div>
+
+<button class="accordion"><b>Q.Is it safe to enter my credit/debit card details while using JustBuyIt.com?</b></button>
+<div class="panel">
+<p><b>Ans:</b> YES, 100%. We at JustBuyIt.com never misuse our clients' credit/debit card details.</p>
+</div>
+
+<button class="accordion"><b>Q.Are the reviews under the laptops at JustBuyIt.com trustworthy?</b></button>
+<div class="panel">
+<p><b>Ans:</b> YES, they are. In fact, it is one of our website's salient features. We at JustBuyIt.com research meticulosly from various sources about that particular laptop to arrive at the correct and right conclusions and thus saving the customer's valuable time and hard-earned money </p>
+</div>
+
+<button class="accordion"><b>Q.Is this website involved in shipping of the products?</b></button>
+<div class="panel">
+<p><b>Ans:</b> YES, We at JustBuyIt.com are involved in shipping aspect too. </p>
+</div>
+
+<button class="accordion"><b>Q.Can i contact the customer support at JustBuyIt.com if my order doesn't arrive on time?</b></button>
+<div class="panel">
+<p><b>Ans:</b>YES defintely, you can contact us the customer service department of the JustBuyIt.com to clarifiy any issue you face with respect to the whole purchasing experience. </p>
+</div>
+
+<button class="accordion"><b>Q.What should i do to get an immediate response for my queries?</b></button>
+<div class="panel">
+<p><b>Ans:</b> You can always use the chat feature of our website to get an immediate response to youe queries. </p>
+</div>
+
+<button class="accordion"><b>Q.What should i do if i find the review or the specs for a laptop is not correct?</b></button>
+<div class="panel">
+<p><b>Ans:</b> You can always send us an email at JustBuyIt-CC@gmail.com. We will defintely make the necessary changes, if your suggestion is found to be a valid one.</p>
+</div>
+
+<br>
+<p style="font-size:larger; color:#f9fd00;">If your query is still not answered ,<a href="mailto:JustBuyIt-CC@gmail.com"? style="color:#ff4800;">Click Here To send us email</a>We will get back to you within a few days</p>
+</body>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+acc[i].addEventListener("click", function() {
+this.classList.toggle("active");
+var panel = this.nextElementSibling;
+if (panel.style.maxHeight) {
+panel.style.maxHeight = null;
+} else {
+panel.style.maxHeight = panel.scrollHeight + "px";
+}
+});
+}
+</script>
+
+</body>
+</html>
